@@ -340,7 +340,7 @@ small {
   width: 33px;
   height: 33px;
   border-radius: 50%;
-  background: transparent;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
