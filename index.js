@@ -1,34 +1,22 @@
-const menu = document.querySelector('.menu');
-const nav = document.querySelector('.nav');
-const links = document.querySelectorAll('.link');
+const date = document.getElementById('date');
+const setCurrentYear = () => {
+  const currentYear = new Date().getFullYear();
+  date.textContent = currentYear;
+};
+setCurrentYear();
 
-menu.addEventListener('click', () => {
-  menu.classList.toggle('active');
-  nav.classList.toggle('show-links');
-});
+// hamburger menu
+const hamburger = document.querySelector('.hamburger');
+const navList = document.querySelector('.nav-list');
+const socials = document.querySelector('.social-nav');
+const navLinks = document.querySelectorAll('.nav-links');
 
-links.forEach((link) => {
-  link.addEventListener('click', () => {
-    menu.classList.remove('active');
-    nav.classList.remove('show-links');
-  });
-});
+const toggleMobileMenu = () => {
+  hamburger.classList.toggle('open');
+  navList.classList.toggle('open');
+  socials.classList.toggle('open');
+  document.body.classList.toggle('open');
+};
 
-const form = document.querySelector('#form');
-const email = document.querySelector('#email');
-const span = document.querySelector('.span-btn');
-function checkMail(mail) {
-  if (mail.match(/^([a-z0-9.-]+)+@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/)) {
-    return true;
-  }
-  return false;
-}
-
-form.addEventListener('submit', (e) => {
-  if (!checkMail(email.value)) {
-    e.preventDefault();
-    span.innerText = 'please enter valid email address';
-  } else {
-    span.innerText = '';
-  }
-});
+navLinks.forEach((link) => link.addEventListener('click', toggleMobileMenu));
+hamburger.addEventListener('click', toggleMobileMenu);
