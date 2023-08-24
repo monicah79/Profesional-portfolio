@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;800;900&display=swap");
 
 :root {
   --primary-clr: hsl(0, 0%, 0%);
@@ -69,19 +69,9 @@
 }
 
 body {
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Fira Sans',
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Fira Sans", "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   font-size: clamp(1.4rem, 1vw, 1.6rem);
   line-height: 1.6;
   background: var(--primary-clr);
@@ -243,7 +233,7 @@ h3 {
 
 .hover-effect::after {
   position: absolute;
-  content: '';
+  content: "";
   left: 0;
   bottom: -2px;
   width: 100%;
@@ -408,7 +398,7 @@ small {
 }
 
 .hire-btn::before {
-  content: '';
+  content: "";
   z-index: -1;
   position: absolute;
   top: 100%;
@@ -466,13 +456,9 @@ small {
   align-self: end;
   justify-self: end;
   width: 425px;
-  box-shadow:
-    0 0 2.2px rgba(0, 0, 0, 0.006),
-    0 0 5.3px rgba(0, 0, 0, 0.008),
-    0 0 10px rgba(0, 0, 0, 0.01),
-    0 0 17.9px rgba(0, 0, 0, 0.012),
-    0 0 33.4px rgba(0, 0, 0, 0.014),
-    0 0 80px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 0 2.2px rgba(0, 0, 0, 0.006), 0 0 5.3px rgba(0, 0, 0, 0.008),
+    0 0 10px rgba(0, 0, 0, 0.01), 0 0 17.9px rgba(0, 0, 0, 0.012),
+    0 0 33.4px rgba(0, 0, 0, 0.014), 0 0 80px rgba(0, 0, 0, 0.02);
 
   /* filter: brightness(0.8); */
 }
@@ -621,13 +607,9 @@ small {
   border-radius: 0.3rem;
   overflow: hidden;
   font-size: 1.45rem;
-  box-shadow:
-    0 0 2.2px rgba(0, 0, 0, 0.011),
-    0 0 5.3px rgba(0, 0, 0, 0.016),
-    0 0 10px rgba(0, 0, 0, 0.02),
-    0 0 17.9px rgba(0, 0, 0, 0.024),
-    0 0 33.4px rgba(0, 0, 0, 0.029),
-    0 0 80px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 2.2px rgba(0, 0, 0, 0.011), 0 0 5.3px rgba(0, 0, 0, 0.016),
+    0 0 10px rgba(0, 0, 0, 0.02), 0 0 17.9px rgba(0, 0, 0, 0.024),
+    0 0 33.4px rgba(0, 0, 0, 0.029), 0 0 80px rgba(0, 0, 0, 0.04);
   transition: background 300ms ease-in-out;
 }
 
@@ -670,6 +652,17 @@ small {
 .contact {
   margin-block-start: var(--section-mt);
   padding: 4rem 1rem;
+}
+
+.card {
+  display: flex;
+  gap: 40px;
+  margin-top: 80px;
+  padding-bottom: 70px;
+}
+
+.col-2 {
+  margin-left: 90px;
 }
 
 .mail-link {
@@ -751,7 +744,7 @@ small {
 @media screen and (max-width: 50em) {
   body::after {
     position: absolute;
-    content: '';
+    content: "";
     top: 0;
     left: 0;
     width: 100%;
@@ -894,5 +887,99 @@ small {
 
   .mail-link {
     justify-content: center;
+  }
+  /* Contact-section starts here */
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 40px;
+  }
+
+  .col-2 {
+    margin-left: 0px;
+  }
+
+}
+
+  #contact .contact-details h2 {
+    color: var(--card-color);
+    margin-top: 30px;
+    font-size: 38px;
+    line-height: 44px;
+  }
+
+  .contact-details p {
+    color: var(--card-color);
+    margin-top: 1rem;
+    line-height: 28px;
+    font-size: 20px;
+  }
+
+  .form,
+  .contact-form-input,
+  .message {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+
+  .contact-form-input,
+  .message {
+    border-radius: 0.4rem;
+    margin-top: 20px;
+    border: 1px solid #cfd8dc;
+  }
+
+  .contact-form-input {
+    padding: 0.75rem;
+    width: 300px;
+  }
+
+  #abt-btn {
+    display: flex;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  .error {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(255, 2, 2);
+  }
+
+
+/* Contact section starts here */
+@media (min-width: 768px) {
+  #contact {
+    margin-top: -8rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-details h2 {
+    padding-top: 2rem;
+  }
+
+  .contact-details p {
+    padding-left: 19%;
+    padding-right: 19%;
+    margin-bottom: 30px;
+  }
+
+  .form,
+  .contact-form-input,
+  .message {
+    width: 500px;
+  }
+
+  .contact-details .primary-btn {
+    margin-left: 35%;
+  }
+
+  .close img {
+    width: 2%;
   }
 }
